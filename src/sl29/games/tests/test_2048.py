@@ -73,16 +73,7 @@ def test__ajouter_tuile():
 
 def test__supprimer_zeros():
     print("----> Tests de _supprimer_zeros...")
-    inputs_expecteds = (
-        ([], []),
-        ([0, 0, 0], []),
-        ([2, 4, 8], [2, 4, 8]),
-        ([0, 2, 0, 4, 0], [2, 4]),
-        ([2, 0, 0, 2, 4, 0, 8], [2, 2, 4, 8]),
-    )
-    for inp, expected in inputs_expecteds:
-        result = _supprimer_zeros(inp)
-        assert result == expected, f"Pour l'entrée {inp}, attendu {expected} mais obtenu {result}"
+    raise NotImplementedError("Tests de _supprimer_zeros non implémentés.")
     print("OK")
 
 def test__fusionner():
@@ -154,77 +145,22 @@ def test__deplacer_gauche():
 
 def test__inverser_lignes():
     print("----> Tests de _inverser_lignes...")
-    plateau = [
-        [2, 0, 0, 2],
-        [4, 8, 2, 0],
-        [0, 2, 2, 0],
-        [1024, 512, 256, 128]
-    ]
-    attendu = [
-        [2, 0, 0, 2],
-        [0, 2, 8, 4],
-        [0, 2, 2, 0],
-        [128, 256, 512, 1024]
-    ]
-    resultat = _inverser_lignes(plateau)
-    assert resultat == attendu
+    raise NotImplementedError("Tests de _inverser_lignes non implémentés.")
     print("OK")
 
 def test__deplacer_droite():
     print("----> Tests de _deplacer_droite...")
-    plateau = [
-        [2, 2, 0, 0],
-        [2, 2, 2, 2],
-        [0, 0, 4, 4],
-        [8, 4, 2, 2]
-    ]
-    attendu_p = [
-        [0, 0, 0, 4],
-        [0, 0, 4, 4],
-        [0, 0, 0, 8],
-        [0, 8, 4, 4]
-    ]
-    resultat, points = _deplacer_droite(plateau)
-    assert resultat == attendu_p
-    assert points == 24
+    raise NotImplementedError("Tests de _deplacer_droite non implémentés.")
     print("OK")
 
 def test__transposer():
     print("----> Tests de _transposer...")
-    plateau = [
-        [1, 2, 3, 4],
-        [5, 6, 7, 8],
-        [9, 10, 11, 12],
-        [13, 14, 15, 16]
-    ]
-    attendu = [
-        [1, 5, 9, 13],
-        [2, 6, 10, 14],
-        [3, 7, 11, 15],
-        [4, 8, 12, 16]
-    ]
-    resultat = _transposer(plateau)
-    assert resultat == attendu
+    raise NotImplementedError("Tests de _transposer non implémentés.")
     print("OK")
 
 def test__deplacer_haut():
     print("----> Tests de _deplacer_haut...")
-    plateau = [
-        [2, 2, 0, 8],
-        [2, 0, 4, 4],
-        [0, 2, 4, 2],
-        [0, 2, 0, 2]
-    ]
-    attendu_p = [
-        [4, 4, 8, 8],
-        [0, 2, 0, 4],
-        [0, 0, 0, 4],
-        [0, 0, 0, 0]
-    ]
-    attendu_pts = 4 + 4 + 8 + 4
-    resultat, points = _deplacer_haut(plateau)
-    assert resultat == attendu_p, f"J'aurais du avoir ce plateau {attendu_p} points mais j'ai ce plateau {resultat}."
-    assert points == attendu_pts, f"J'aurais du avoir {attendu_pts} points mais j'ai {points} points."
+    raise NotImplementedError("Tests de _deplacer_haut non implémentés.")
     print("OK")
 
 def test__deplacer_bas():
